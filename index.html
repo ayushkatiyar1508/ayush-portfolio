@@ -10,141 +10,20 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#080b12;--surface:#101622;--surface2:#151d2b;--text:#f4f7fb;--muted:#a9b4c5;--accent:#64f4c2;--accent2:#62a8ff;--border:rgba(255,255,255,.09);--max:1120px}
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(98,168,255,.13),transparent 30%),radial-gradient(circle at 10% 20%,rgba(100,244,194,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.7}
-a{color:inherit;text-decoration:none}
-.container{width:min(var(--max),92%);margin:auto}
-header{position:sticky;top:0;z-index:20;background:rgba(8,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
-.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
-.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.03em}.logo span{color:var(--accent)}
-nav{display:flex;gap:1.35rem}nav a{color:var(--muted);font-size:.9rem;font-weight:600}nav a:hover{color:var(--accent)}
-.hero{padding:105px 0 85px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
-.eyebrow{display:inline-flex;padding:.4rem .75rem;border:1px solid rgba(100,244,194,.25);border-radius:999px;color:var(--accent);background:rgba(100,244,194,.06);font-size:.78rem;font-weight:700;margin-bottom:1.2rem}
-h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.065em;max-width:800px}
-.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.hero p{margin-top:1.35rem;color:var(--muted);max-width:680px;font-size:1.05rem}
-.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:10px;border:1px solid var(--border);font-weight:700;font-size:.9rem;transition:.2s}
-.btn.primary{background:var(--accent);color:#06100c;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);border-color:rgba(100,244,194,.5)}
-.profile-card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
-.profile-card .code{font-family:ui-monospace,monospace;color:#c7d2e2;font-size:.88rem}
-.stat{padding:16px 0;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:0}.stat b{display:block;font-size:1.4rem;color:var(--accent)}.stat span{color:var(--muted);font-size:.84rem}
-section{padding:78px 0}section[id]{scroll-margin-top:90px}
-.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}
-h2{font-size:2rem;letter-spacing:-.04em} .section-head p{color:var(--muted);max-width:650px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:rgba(16,22,34,.8);border:1px solid var(--border);border-radius:18px;padding:24px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(100,244,194,.28)}
-.card h3{font-size:1.08rem;margin-bottom:.55rem}.card p,.card li{color:var(--muted);font-size:.9rem}.card strong{color:#dfe8f5}
-.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
-.skill-card{display:flex;gap:15px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}.icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(100,244,194,.1);color:var(--accent);font-weight:800;flex:none}
-.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.tag{padding:.34rem .58rem;border-radius:7px;background:var(--surface2);border:1px solid var(--border);color:#d5deea;font-size:.75rem}
-.project{display:flex;flex-direction:column}.project .tech{margin-top:auto;padding-top:18px;color:var(--accent);font-size:.76rem;font-weight:700}
-.list{display:grid;gap:12px}.list-item{padding:18px 20px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--muted)}.list-item b{color:var(--text)}
-.resume{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:32px;border:1px solid rgba(100,244,194,.2);border-radius:20px;background:linear-gradient(110deg,rgba(100,244,194,.07),rgba(98,168,255,.06))}
-.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.contact{padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--surface)}.contact small{display:block;color:var(--muted);margin-bottom:4px}.contact a{font-size:.86rem;word-break:break-word}.contact a:hover{color:var(--accent)}
-footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.82rem}
-@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px}.grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1fr}.resume{grid-template-columns:1fr}}
-@media(max-width:600px){nav{display:none}.hero{padding:60px 0}.section-head{display:block}.section-head p{margin-top:8px}.contact-grid{grid-template-columns:1fr}section{padding:55px 0}}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(98,168,255,.13),transparent 30%),radial-gradient(circle at 10% 20%,rgba(100,244,194,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.7}a{color:inherit;text-decoration:none}.container{width:min(var(--max),92%);margin:auto}header{position:sticky;top:0;z-index:20;background:rgba(8,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.03em}.logo span{color:var(--accent)}nav{display:flex;gap:1.35rem}nav a{color:var(--muted);font-size:.9rem;font-weight:600}nav a:hover{color:var(--accent)}.hero{padding:105px 0 85px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}.eyebrow{display:inline-flex;padding:.4rem .75rem;border:1px solid rgba(100,244,194,.25);border-radius:999px;color:var(--accent);background:rgba(100,244,194,.06);font-size:.78rem;font-weight:700;margin-bottom:1.2rem}h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.065em;max-width:800px}.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}.hero p{margin-top:1.35rem;color:var(--muted);max-width:680px;font-size:1.05rem}.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}.btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:10px;border:1px solid var(--border);font-weight:700;font-size:.9rem;transition:.2s;cursor:pointer}.btn.primary{background:var(--accent);color:#06100c;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);border-color:rgba(100,244,194,.5)}.profile-card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.25)}.profile-card .code{font-family:ui-monospace,monospace;color:#c7d2e2;font-size:.88rem}.stat{padding:16px 0;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:0}.stat b{display:block;font-size:1.4rem;color:var(--accent)}.stat span{color:var(--muted);font-size:.84rem}section{padding:78px 0}section[id]{scroll-margin-top:90px}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}h2{font-size:2rem;letter-spacing:-.04em}.section-head p{color:var(--muted);max-width:650px}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:rgba(16,22,34,.8);border:1px solid var(--border);border-radius:18px;padding:24px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(100,244,194,.28)}.card h3{font-size:1.08rem;margin-bottom:.55rem}.card p,.card li{color:var(--muted);font-size:.9rem}.card strong{color:#dfe8f5}.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.skill-card{display:flex;gap:15px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}.icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(100,244,194,.1);color:var(--accent);font-weight:800;flex:none}.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.tag{padding:.34rem .58rem;border-radius:7px;background:var(--surface2);border:1px solid var(--border);color:#d5deea;font-size:.75rem}.project{display:flex;flex-direction:column}.project .tech{margin-top:auto;padding-top:18px;color:var(--accent);font-size:.76rem;font-weight:700}.list{display:grid;gap:12px}.list-item{padding:18px 20px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--muted)}.list-item b{color:var(--text)}.resume{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:32px;border:1px solid rgba(100,244,194,.2);border-radius:20px;background:linear-gradient(110deg,rgba(100,244,194,.07),rgba(98,168,255,.06))}.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.contact{padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--surface)}.contact small{display:block;color:var(--muted);margin-bottom:4px}.contact a{font-size:.86rem;word-break:break-word}.contact a:hover{color:var(--accent)}footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.82rem}@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px}.grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1fr}.resume{grid-template-columns:1fr}}@media(max-width:600px){nav{display:none}.hero{padding:60px 0}.section-head{display:block}.section-head p{margin-top:8px}.contact-grid{grid-template-columns:1fr}section{padding:55px 0}}
 </style>
 </head>
 <body>
-<header>
-  <div class="container nav">
-    <a class="logo" href="#">Ayush<span>.</span></a>
-    <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
-  </div>
-</header>
-
+<header><div class="container nav"><a class="logo" href="#">Ayush<span>.</span></a><nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></div></header>
 <main>
-<section class="container hero" id="about">
-  <div>
-    <div class="eyebrow">B.Tech CSE Student · Software Engineering Intern</div>
-    <h1>Building practical <span>software</span> with code.</h1>
-    <p>I'm Ayush Katiyar, a Computer Science & Engineering student at ITS Engineering College, Greater Noida (AKTU), focused on software engineering, DSA, backend development and API integration.</p>
-    <div class="actions">
-      <a class="btn primary" href="#projects">View Projects</a>
-      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
-      <a class="btn" href="resume.pdf" download>Download PDF</a>
-    </div>
-  </div>
-  <div class="profile-card">
-    <div class="code">// quick profile</div>
-    <div class="stat"><b>6.5 / 10</b><span>Current CGPA</span></div>
-    <div class="stat"><b>170+</b><span>LeetCode problems solved</span></div>
-    <div class="stat"><b>2028</b><span>Expected graduation</span></div>
-    <div class="stat"><b>SIH</b><span>Participant · Smart India Hackathon</span></div>
-  </div>
-</section>
-
-<section id="education">
-<div class="container">
-  <div class="section-head"><div><h2>Education</h2><p>Computer Science foundation with hands-on software development.</p></div></div>
-  <div class="card">
-    <h3>ITS Engineering College, Greater Noida (AKTU)</h3>
-    <p>B.Tech in Computer Science & Engineering · Expected 2028</p>
-    <div class="tags"><span class="tag">CGPA: 6.5 / 10</span><span class="tag">TFW Seat Awarded</span></div>
-  </div>
-</div>
-</section>
-
-<section id="skills">
-<div class="container">
-  <div class="section-head"><div><h2>Technical Skills</h2><p>Tools and technologies I use to build applications and strengthen my CS fundamentals.</p></div></div>
-  <div class="skills">
-    <div class="skill-card"><div class="icon">01</div><div><strong>Languages</strong><div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></div></div>
-    <div class="skill-card"><div class="icon">02</div><div><strong>Core CS</strong><div class="tags"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span></div></div></div>
-    <div class="skill-card"><div class="icon">03</div><div><strong>Backend & Web</strong><div class="tags"><span class="tag">Flask</span><span class="tag">REST APIs</span><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div></div>
-    <div class="skill-card"><div class="icon">04</div><div><strong>Tools</strong><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span></div></div></div>
-  </div>
-</div>
-</section>
-
-<section id="projects">
-<div class="container">
-  <div class="section-head"><div><h2>Projects</h2><p>Selected projects focused on useful real-world workflows, APIs and responsive web applications.</p></div></div>
-  <div class="grid">
-    <article class="card project"><h3>Railway Segment Vacancy Finder</h3><p>Built a Flask web application that finds seat availability for specific journey segments such as Delhi → Aligarh → Kanpur. Integrated railway APIs with train-number/name lookup and station search with name and station-code autosuggest.</p><div class="tech">Flask · JavaScript · HTML/CSS · Railway APIs</div></article>
-    <article class="card project"><h3>Virtual Campus Assistant</h3><p>Built a REST backend in Flask that answers common student queries on CGPA, library timings and placement information. Added multilingual support for Hindi and regional languages and connected the deployed backend to a web frontend.</p><div class="tech">Flask · Python · REST API · GoogleTranslator</div></article>
-    <article class="card project"><h3>Image Hunt</h3><p>Built a responsive image-search application with keyword search and dynamic rendering using the Unsplash API.</p><div class="tech">JavaScript · HTML/CSS · Unsplash API</div></article>
-  </div>
-</div>
-</section>
-
-<section id="achievements">
-<div class="container">
-  <div class="section-head"><div><h2>Achievements & Certifications</h2><p>Competitive programming progress and foundational cloud/software credentials.</p></div></div>
-  <div class="list">
-    <div class="list-item"><b>Smart India Hackathon (SIH)</b> — Participant</div>
-    <div class="list-item"><b>LeetCode</b> — 170+ problems solved: 128 Easy, 37 Medium, 7 Hard</div>
-    <div class="list-item"><b>AWS Academy Cloud Foundations</b> — AWS Academy (2025)</div>
-    <div class="list-item"><b>Data Structures & Algorithms</b> — Infosys Springboard: Java; Python Part 1 & Part 2 (2026)</div>
-  </div>
-</div>
-</section>
-
-<section id="resume">
-<div class="container">
-  <div class="resume">
-    <div><h2>Resume</h2><p style="color:var(--muted);margin-top:6px">Open or download my latest SDE fresher resume as a PDF.</p></div>
-    <div class="actions" style="margin-top:0"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume</a><a class="btn" href="resume.pdf" download>Download</a></div>
-  </div>
-</div>
-</section>
-
-<section id="contact">
-<div class="container">
-  <div class="section-head"><div><h2>Let's Connect</h2><p>Open to software engineering opportunities, projects and technical collaborations.</p></div></div>
-  <div class="contact-grid">
-    <div class="contact"><small>Email</small><a href="mailto:ayushkatiyar1508@gmail.com">ayushkatiyar1508@gmail.com</a></div>
-    <div class="contact"><small>GitHub</small><a href="https://github.com/ayushkatiyar1508" target="_blank" rel="noopener">github.com/ayushkatiyar1508</a></div>
-    <div class="contact"><small>LinkedIn</small><a href="https://www.linkedin.com/in/ayushkatiyar1508/" target="_blank" rel="noopener">linkedin.com/in/ayushkatiyar1508</a></div>
-    <div class="contact"><small>LeetCode</small><a href="https://leetcode.com/u/ayushkatiyar1508/" target="_blank" rel="noopener">leetcode.com/u/ayushkatiyar1508</a></div>
-  </div>
-</div>
-</section>
+<section class="container hero" id="about"><div><div class="eyebrow">B.Tech CSE Student · Software Engineering Intern</div><h1>Building practical <span>software</span> with code.</h1><p>I'm Ayush Katiyar, a Computer Science & Engineering student at ITS Engineering College, Greater Noida (AKTU), focused on software engineering, DSA, backend development and API integration.</p><div class="actions"><a class="btn primary" href="#projects">View Projects</a><a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a><a class="btn" href="resume.pdf" download="Ayush_Katiyar_Resume.pdf">Download PDF</a></div></div><div class="profile-card"><div class="code">// quick profile</div><div class="stat"><b>6.5 / 10</b><span>Current CGPA</span></div><div class="stat"><b>170+</b><span>LeetCode problems solved</span></div><div class="stat"><b>2028</b><span>Expected graduation</span></div><div class="stat"><b>SIH</b><span>Participant · Smart India Hackathon</span></div></div></section>
+<section id="education"><div class="container"><div class="section-head"><div><h2>Education</h2><p>Computer Science foundation with hands-on software development.</p></div></div><div class="card"><h3>ITS Engineering College, Greater Noida (AKTU)</h3><p>B.Tech in Computer Science & Engineering · Expected 2028</p><div class="tags"><span class="tag">CGPA: 6.5 / 10</span><span class="tag">TFW Seat Awarded</span></div></div></div></section>
+<section id="skills"><div class="container"><div class="section-head"><div><h2>Technical Skills</h2><p>Tools and technologies I use to build applications and strengthen my CS fundamentals.</p></div></div><div class="skills"><div class="skill-card"><div class="icon">01</div><div><strong>Languages</strong><div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></div></div><div class="skill-card"><div class="icon">02</div><div><strong>Core CS</strong><div class="tags"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span></div></div></div><div class="skill-card"><div class="icon">03</div><div><strong>Backend & Web</strong><div class="tags"><span class="tag">Flask</span><span class="tag">REST APIs</span><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div></div><div class="skill-card"><div class="icon">04</div><div><strong>Tools</strong><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span></div></div></div></div></div></section>
+<section id="projects"><div class="container"><div class="section-head"><div><h2>Projects</h2><p>Selected projects focused on useful real-world workflows, APIs and responsive web applications.</p></div></div><div class="grid"><article class="card project"><h3>Railway Segment Vacancy Finder</h3><p>Built a Flask web application that finds seat availability for specific journey segments such as Delhi → Aligarh → Kanpur. Integrated railway APIs with train-number/name lookup and station search with name and station-code autosuggest.</p><div class="tech">Flask · JavaScript · HTML/CSS · Railway APIs</div></article><article class="card project"><h3>Virtual Campus Assistant</h3><p>Built a REST backend in Flask that answers common student queries on CGPA, library timings and placement information. Added multilingual support for Hindi and regional languages and connected the deployed backend to a web frontend.</p><div class="tech">Flask · Python · REST API · GoogleTranslator</div></article><article class="card project"><h3>Image Hunt</h3><p>Built a responsive image-search application with keyword search and dynamic rendering using the Unsplash API.</p><div class="tech">JavaScript · HTML/CSS · Unsplash API</div></article></div></div></section>
+<section id="achievements"><div class="container"><div class="section-head"><div><h2>Achievements & Certifications</h2><p>Competitive programming progress and foundational cloud/software credentials.</p></div></div><div class="list"><div class="list-item"><b>Smart India Hackathon (SIH)</b> — Participant</div><div class="list-item"><b>LeetCode</b> — 170+ problems solved: 128 Easy, 37 Medium, 7 Hard</div><div class="list-item"><b>AWS Academy Cloud Foundations</b> — AWS Academy (2025)</div><div class="list-item"><b>Data Structures & Algorithms</b> — Infosys Springboard: Java; Python Part 1 & Part 2 (2026)</div></div></div></section>
+<section id="resume"><div class="container"><div class="resume"><div><h2>Resume</h2><p style="color:var(--muted);margin-top:6px">Open or download my latest SDE fresher resume as a PDF.</p></div><div class="actions" style="margin-top:0"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume</a><a class="btn" href="resume.pdf" download="Ayush_Katiyar_Resume.pdf">Download</a></div></div></div></section>
+<section id="contact"><div class="container"><div class="section-head"><div><h2>Let's Connect</h2><p>Open to software engineering opportunities, projects and technical collaborations.</p></div></div><div class="contact-grid"><div class="contact"><small>Email</small><a href="mailto:ayushkatiyar1508@gmail.com">ayushkatiyar1508@gmail.com</a></div><div class="contact"><small>GitHub</small><a href="https://github.com/ayushkatiyar1508" target="_blank" rel="noopener">github.com/ayushkatiyar1508</a></div><div class="contact"><small>LinkedIn</small><a href="https://www.linkedin.com/in/ayushkatiyar1508/" target="_blank" rel="noopener">linkedin.com/in/ayushkatiyar1508</a></div><div class="contact"><small>LeetCode</small><a href="https://leetcode.com/u/ayushkatiyar1508/" target="_blank" rel="noopener">leetcode.com/u/ayushkatiyar1508</a></div></div></div></section>
 </main>
-
 <footer><div class="container">© 2026 Ayush Katiyar · B.Tech CSE · Greater Noida / Kanpur</div></footer>
 </body>
 </html>

@@ -1,236 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ayush Katiyar | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: #f0f4f8;
-      color: #333;
-      scroll-behavior: smooth;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(135deg, #1f1c2c, #928dab);
-      color: white;
-      text-align: center;
-      padding: 3rem 1rem 2rem;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    }
-
-    header h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      font-size: 1.25rem;
-      opacity: 0.9;
-    }
-
-    nav {
-      margin-top: 1.5rem;
-    }
-
-    nav a {
-      margin: 0 1rem;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s ease;
-    }
-
-    nav a:hover {
-      color: #00ffff;
-    }
-
-    section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    h2 {
-      font-size: 2.2rem;
-      color: #2c3e50;
-      margin-bottom: 1rem;
-      border-left: 5px solid #00cec9;
-      padding-left: 1rem;
-    }
-
-    .skills, .projects {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-      gap: 2rem;
-    }
-
-    .card {
-      background: #fff;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
-    }
-
-    .card strong {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-size: 1.1rem;
-      color: #2d3436;
-    }
-
-    .card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #0984e3;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.6rem;
-      background: #00cec9;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: 500;
-      transition: background 0.3s ease;
-    }
-
-    .btn:hover {
-      background: #0097a7;
-    }
-
-    footer {
-      background: #1f1c2c;
-      color: white;
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.9rem;
-    }
-
-    a {
-      color: #00b894;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive Padding */
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 2.2rem;
-      }
-
-      header p {
-        font-size: 1rem;
-      }
-
-      nav a {
-        display: inline-block;
-        margin: 0.5rem 0.7rem;
-      }
-
-      section {
-        padding: 2.5rem 1rem;
-      }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ayush Katiyar | Software Engineering Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Poppins',sans-serif;background:#f0f4f8;color:#333;scroll-behavior:smooth;line-height:1.6}
+header{background:linear-gradient(135deg,#1f1c2c,#928dab);color:white;text-align:center;padding:3rem 1rem 2rem;box-shadow:0 4px 15px rgba(0,0,0,.2)}
+header h1{font-size:3rem;margin-bottom:.5rem}header p{font-size:1.25rem;opacity:.9}
+nav{margin-top:1.5rem}nav a{margin:0 1rem;color:#fff;text-decoration:none;font-weight:500}nav a:hover{color:#00ffff}
+section{padding:4rem 2rem;max-width:1100px;margin:auto}
+h2{font-size:2.2rem;color:#2c3e50;margin-bottom:1rem;border-left:5px solid #00cec9;padding-left:1rem}
+.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem}
+.card{background:#fff;padding:2rem;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.15)}
+.card strong{display:block;margin-bottom:.5rem;font-size:1.1rem;color:#2d3436}.card h3{font-size:1.3rem;margin-bottom:.5rem;color:#0984e3}
+.btn{display:inline-block;margin-top:1rem;padding:.8rem 1.6rem;background:#00cec9;color:white;text-decoration:none;border-radius:8px;font-weight:500}
+.btn:hover{background:#0097a7}footer{background:#1f1c2c;color:white;text-align:center;padding:2rem 1rem;font-size:.9rem}
+a{color:#00b894;text-decoration:none}a:hover{text-decoration:underline}
+@media(max-width:600px){header h1{font-size:2.2rem}header p{font-size:1rem}nav a{display:inline-block;margin:.5rem .7rem}section{padding:2.5rem 1rem}}
+</style>
 </head>
 <body>
-  <header>
-    <h1>Ayush Katiyar</h1>
-    <p>Aspiring Software Engineer | B.Tech CSE Student</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#resume">Resume</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I am a B.Tech student in Computer Science Engineering at ITS Engineering College, Greater Noida. Passionate about building applications and solving problems, I enjoy coding in C++, Python, and exploring front-end web development.</p>
-  </section>
-
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills">
-      <div class="card">
-        <strong>Languages</strong>
-        <p>C, C++, Python</p>
-      </div>
-      <div class="card">
-        <strong>Core Concepts</strong>
-        <p>Data Structures & Algorithms, OOP, DBMS</p>
-      </div>
-      <div class="card">
-        <strong>Tools & Platforms</strong>
-        <p>Git, MS Office, VS Code</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="projects">
-      <div class="card">
-        <h3>Portfolio Website</h3>
-        <p>Responsive website built using HTML, CSS, and JavaScript to showcase my profile, projects, and resume. Hosted using GitHub Pages.</p>
-      </div>
-      <div class="card">
-        <h3>Simple Calculator (C++)</h3>
-        <p>Console-based calculator using object-oriented programming in C++. Handles basic arithmetic and error validation.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="resume">
-    <h2>Resume</h2>
-    <a href="resume.docx" class="btn" download>Download My Resume </a>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:katiyarayush2007@gmail.com">katiyarayush2007@gmail.com</a></p>
-    <p>Phone: +91-9140595184</p>
-    <p>GitHub: <a href="https://github.com/ayushkatiyar1508" target="_blank">github.com/ayushkatiyar1508</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/ayushkatiyar1508" target="_blank">linkedin.com/in/ayushkatiyar1508</a></p>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Ayush Katiyar. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<header><h1>Ayush Katiyar</h1><p>B.Tech CSE Student | Software Engineering Intern</p>
+<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></header>
+<section id="about"><h2>About Me</h2><p>B.Tech Computer Science & Engineering student at ITS Engineering College, Greater Noida (AKTU), focused on software engineering, DSA, backend development and API integration. I build practical applications using C++, Python, JavaScript, Flask and REST APIs.</p></section>
+<section id="skills"><h2>Technical Skills</h2><div class="skills">
+<div class="card"><strong>Languages</strong><p>C++, Python, JavaScript, SQL</p></div>
+<div class="card"><strong>Core CS</strong><p>Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks</p></div>
+<div class="card"><strong>Backend & Web</strong><p>Flask, REST APIs, React, HTML, CSS</p></div>
+<div class="card"><strong>Tools</strong><p>Git, GitHub, VS Code</p></div></div></section>
+<section id="projects"><h2>Projects</h2><div class="projects">
+<div class="card"><h3>Railway Segment Vacancy Finder</h3><p>Flask-based railway search application for segment-specific seat availability, with railway API integration, train lookup and station name/code autosuggest.</p><p><strong>Tech:</strong> Flask, JavaScript, HTML/CSS, Railway APIs</p></div>
+<div class="card"><h3>Virtual Campus Assistant</h3><p>REST backend answering student queries on CGPA, library timings and placements, with multilingual Hindi/regional-language translation and online deployment.</p><p><strong>Tech:</strong> Flask, Python, REST API, GoogleTranslator</p></div>
+<div class="card"><h3>Image Hunt</h3><p>Responsive image-search application using keyword search and dynamic result rendering through the Unsplash API.</p><p><strong>Tech:</strong> JavaScript, HTML/CSS, Unsplash API</p></div></div></section>
+<section id="resume"><h2>Resume</h2><p>Download my latest SDE fresher resume.</p><a href="resume.pdf" class="btn" download>Download My Resume</a></section>
+<section id="contact"><h2>Contact</h2><p>Email: <a href="mailto:ayushkatiyar1508@gmail.com">ayushkatiyar1508@gmail.com</a></p><p>Phone: +91-9140595184</p><p>GitHub: <a href="https://github.com/ayushkatiyar1508" target="_blank">github.com/ayushkatiyar1508</a></p><p>LinkedIn: <a href="https://www.linkedin.com/in/ayushkatiyar1508" target="_blank">linkedin.com/in/ayushkatiyar1508</a></p><p>LeetCode: <a href="https://leetcode.com/u/ayushkatiyar1508/" target="_blank">leetcode.com/u/ayushkatiyar1508</a></p></section>
+<footer><p>&copy; 2026 Ayush Katiyar. All rights reserved.</p></footer>
+</body></html>

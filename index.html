@@ -3,40 +3,148 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ayush Katiyar — B.Tech CSE student and software engineering intern portfolio.">
 <title>Ayush Katiyar | Software Engineering Portfolio</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Poppins',sans-serif;background:#f0f4f8;color:#333;scroll-behavior:smooth;line-height:1.6}
-header{background:linear-gradient(135deg,#1f1c2c,#928dab);color:white;text-align:center;padding:3rem 1rem 2rem;box-shadow:0 4px 15px rgba(0,0,0,.2)}
-header h1{font-size:3rem;margin-bottom:.5rem}header p{font-size:1.25rem;opacity:.9}
-nav{margin-top:1.5rem}nav a{margin:0 1rem;color:#fff;text-decoration:none;font-weight:500}nav a:hover{color:#00ffff}
-section{padding:4rem 2rem;max-width:1100px;margin:auto}
-h2{font-size:2.2rem;color:#2c3e50;margin-bottom:1rem;border-left:5px solid #00cec9;padding-left:1rem}
-.skills,.projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:2rem}
-.card{background:#fff;padding:2rem;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.1);transition:.3s}
-.card:hover{transform:translateY(-6px);box-shadow:0 12px 28px rgba(0,0,0,.15)}
-.card strong{display:block;margin-bottom:.5rem;font-size:1.1rem;color:#2d3436}.card h3{font-size:1.3rem;margin-bottom:.5rem;color:#0984e3}
-.btn{display:inline-block;margin-top:1rem;padding:.8rem 1.6rem;background:#00cec9;color:white;text-decoration:none;border-radius:8px;font-weight:500}
-.btn:hover{background:#0097a7}footer{background:#1f1c2c;color:white;text-align:center;padding:2rem 1rem;font-size:.9rem}
-a{color:#00b894;text-decoration:none}a:hover{text-decoration:underline}
-@media(max-width:600px){header h1{font-size:2.2rem}header p{font-size:1rem}nav a{display:inline-block;margin:.5rem .7rem}section{padding:2.5rem 1rem}}
+:root{--bg:#080b12;--surface:#101622;--surface2:#151d2b;--text:#f4f7fb;--muted:#a9b4c5;--accent:#64f4c2;--accent2:#62a8ff;--border:rgba(255,255,255,.09);--max:1120px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,sans-serif;background:radial-gradient(circle at 80% 10%,rgba(98,168,255,.13),transparent 30%),radial-gradient(circle at 10% 20%,rgba(100,244,194,.08),transparent 28%),var(--bg);color:var(--text);line-height:1.7}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(8,11,18,.78);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-size:1.15rem;font-weight:800;letter-spacing:-.03em}.logo span{color:var(--accent)}
+nav{display:flex;gap:1.35rem}nav a{color:var(--muted);font-size:.9rem;font-weight:600}nav a:hover{color:var(--accent)}
+.hero{padding:105px 0 85px;display:grid;grid-template-columns:1.35fr .65fr;gap:50px;align-items:center}
+.eyebrow{display:inline-flex;padding:.4rem .75rem;border:1px solid rgba(100,244,194,.25);border-radius:999px;color:var(--accent);background:rgba(100,244,194,.06);font-size:.78rem;font-weight:700;margin-bottom:1.2rem}
+h1{font-size:clamp(2.7rem,7vw,5.4rem);line-height:1.02;letter-spacing:-.065em;max-width:800px}
+.hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{margin-top:1.35rem;color:var(--muted);max-width:680px;font-size:1.05rem}
+.actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.8rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:.8rem 1.1rem;border-radius:10px;border:1px solid var(--border);font-weight:700;font-size:.9rem;transition:.2s}
+.btn.primary{background:var(--accent);color:#06100c;border-color:var(--accent)}.btn:hover{transform:translateY(-2px);border-color:rgba(100,244,194,.5)}
+.profile-card{background:linear-gradient(145deg,rgba(255,255,255,.07),rgba(255,255,255,.025));border:1px solid var(--border);border-radius:24px;padding:28px;box-shadow:0 25px 80px rgba(0,0,0,.25)}
+.profile-card .code{font-family:ui-monospace,monospace;color:#c7d2e2;font-size:.88rem}
+.stat{padding:16px 0;border-bottom:1px solid var(--border)}.stat:last-child{border-bottom:0}.stat b{display:block;font-size:1.4rem;color:var(--accent)}.stat span{color:var(--muted);font-size:.84rem}
+section{padding:78px 0}section[id]{scroll-margin-top:90px}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:30px}
+h2{font-size:2rem;letter-spacing:-.04em} .section-head p{color:var(--muted);max-width:650px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:rgba(16,22,34,.8);border:1px solid var(--border);border-radius:18px;padding:24px;transition:.25s}.card:hover{transform:translateY(-5px);border-color:rgba(100,244,194,.28)}
+.card h3{font-size:1.08rem;margin-bottom:.55rem}.card p,.card li{color:var(--muted);font-size:.9rem}.card strong{color:#dfe8f5}
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill-card{display:flex;gap:15px;align-items:flex-start;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}.icon{width:38px;height:38px;border-radius:10px;display:grid;place-items:center;background:rgba(100,244,194,.1);color:var(--accent);font-weight:800;flex:none}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.tag{padding:.34rem .58rem;border-radius:7px;background:var(--surface2);border:1px solid var(--border);color:#d5deea;font-size:.75rem}
+.project{display:flex;flex-direction:column}.project .tech{margin-top:auto;padding-top:18px;color:var(--accent);font-size:.76rem;font-weight:700}
+.list{display:grid;gap:12px}.list-item{padding:18px 20px;border:1px solid var(--border);border-radius:14px;background:var(--surface);color:var(--muted)}.list-item b{color:var(--text)}
+.resume{display:grid;grid-template-columns:1fr auto;gap:30px;align-items:center;padding:32px;border:1px solid rgba(100,244,194,.2);border-radius:20px;background:linear-gradient(110deg,rgba(100,244,194,.07),rgba(98,168,255,.06))}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.contact{padding:18px;border:1px solid var(--border);border-radius:14px;background:var(--surface)}.contact small{display:block;color:var(--muted);margin-bottom:4px}.contact a{font-size:.86rem;word-break:break-word}.contact a:hover{color:var(--accent)}
+footer{border-top:1px solid var(--border);padding:28px 0;color:var(--muted);font-size:.82rem}
+@media(max-width:850px){.hero{grid-template-columns:1fr;padding-top:75px}.grid{grid-template-columns:1fr}.skills{grid-template-columns:1fr}.contact-grid{grid-template-columns:1fr 1fr}.resume{grid-template-columns:1fr}}
+@media(max-width:600px){nav{display:none}.hero{padding:60px 0}.section-head{display:block}.section-head p{margin-top:8px}.contact-grid{grid-template-columns:1fr}section{padding:55px 0}}
 </style>
 </head>
 <body>
-<header><h1>Ayush Katiyar</h1><p>B.Tech CSE Student | Software Engineering Intern</p>
-<nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav></header>
-<section id="about"><h2>About Me</h2><p>B.Tech Computer Science & Engineering student at ITS Engineering College, Greater Noida (AKTU), focused on software engineering, DSA, backend development and API integration. I build practical applications using C++, Python, JavaScript, Flask and REST APIs.</p></section>
-<section id="skills"><h2>Technical Skills</h2><div class="skills">
-<div class="card"><strong>Languages</strong><p>C++, Python, JavaScript, SQL</p></div>
-<div class="card"><strong>Core CS</strong><p>Data Structures & Algorithms, OOP, DBMS, Operating Systems, Computer Networks</p></div>
-<div class="card"><strong>Backend & Web</strong><p>Flask, REST APIs, React, HTML, CSS</p></div>
-<div class="card"><strong>Tools</strong><p>Git, GitHub, VS Code</p></div></div></section>
-<section id="projects"><h2>Projects</h2><div class="projects">
-<div class="card"><h3>Railway Segment Vacancy Finder</h3><p>Flask-based railway search application for segment-specific seat availability, with railway API integration, train lookup and station name/code autosuggest.</p><p><strong>Tech:</strong> Flask, JavaScript, HTML/CSS, Railway APIs</p></div>
-<div class="card"><h3>Virtual Campus Assistant</h3><p>REST backend answering student queries on CGPA, library timings and placements, with multilingual Hindi/regional-language translation and online deployment.</p><p><strong>Tech:</strong> Flask, Python, REST API, GoogleTranslator</p></div>
-<div class="card"><h3>Image Hunt</h3><p>Responsive image-search application using keyword search and dynamic result rendering through the Unsplash API.</p><p><strong>Tech:</strong> JavaScript, HTML/CSS, Unsplash API</p></div></div></section>
-<section id="resume"><h2>Resume</h2><p>Download my latest SDE fresher resume.</p><a href="resume.pdf" class="btn" download>Download My Resume</a></section>
-<section id="contact"><h2>Contact</h2><p>Email: <a href="mailto:ayushkatiyar1508@gmail.com">ayushkatiyar1508@gmail.com</a></p><p>Phone: +91-9140595184</p><p>GitHub: <a href="https://github.com/ayushkatiyar1508" target="_blank">github.com/ayushkatiyar1508</a></p><p>LinkedIn: <a href="https://www.linkedin.com/in/ayushkatiyar1508" target="_blank">linkedin.com/in/ayushkatiyar1508</a></p><p>LeetCode: <a href="https://leetcode.com/u/ayushkatiyar1508/" target="_blank">leetcode.com/u/ayushkatiyar1508</a></p></section>
-<footer><p>&copy; 2026 Ayush Katiyar. All rights reserved.</p></footer>
-</body></html>
+<header>
+  <div class="container nav">
+    <a class="logo" href="#">Ayush<span>.</span></a>
+    <nav><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#resume">Resume</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main>
+<section class="container hero" id="about">
+  <div>
+    <div class="eyebrow">B.Tech CSE Student · Software Engineering Intern</div>
+    <h1>Building practical <span>software</span> with code.</h1>
+    <p>I'm Ayush Katiyar, a Computer Science & Engineering student at ITS Engineering College, Greater Noida (AKTU), focused on software engineering, DSA, backend development and API integration.</p>
+    <div class="actions">
+      <a class="btn primary" href="#projects">View Projects</a>
+      <a class="btn" href="resume.pdf" target="_blank" rel="noopener">View Resume</a>
+      <a class="btn" href="resume.pdf" download>Download PDF</a>
+    </div>
+  </div>
+  <div class="profile-card">
+    <div class="code">// quick profile</div>
+    <div class="stat"><b>6.5 / 10</b><span>Current CGPA</span></div>
+    <div class="stat"><b>170+</b><span>LeetCode problems solved</span></div>
+    <div class="stat"><b>2028</b><span>Expected graduation</span></div>
+    <div class="stat"><b>SIH</b><span>Participant · Smart India Hackathon</span></div>
+  </div>
+</section>
+
+<section id="education">
+<div class="container">
+  <div class="section-head"><div><h2>Education</h2><p>Computer Science foundation with hands-on software development.</p></div></div>
+  <div class="card">
+    <h3>ITS Engineering College, Greater Noida (AKTU)</h3>
+    <p>B.Tech in Computer Science & Engineering · Expected 2028</p>
+    <div class="tags"><span class="tag">CGPA: 6.5 / 10</span><span class="tag">TFW Seat Awarded</span></div>
+  </div>
+</div>
+</section>
+
+<section id="skills">
+<div class="container">
+  <div class="section-head"><div><h2>Technical Skills</h2><p>Tools and technologies I use to build applications and strengthen my CS fundamentals.</p></div></div>
+  <div class="skills">
+    <div class="skill-card"><div class="icon">01</div><div><strong>Languages</strong><div class="tags"><span class="tag">C++</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">SQL</span></div></div></div>
+    <div class="skill-card"><div class="icon">02</div><div><strong>Core CS</strong><div class="tags"><span class="tag">DSA</span><span class="tag">OOP</span><span class="tag">DBMS</span><span class="tag">Operating Systems</span><span class="tag">Computer Networks</span></div></div></div>
+    <div class="skill-card"><div class="icon">03</div><div><strong>Backend & Web</strong><div class="tags"><span class="tag">Flask</span><span class="tag">REST APIs</span><span class="tag">React</span><span class="tag">HTML</span><span class="tag">CSS</span></div></div></div>
+    <div class="skill-card"><div class="icon">04</div><div><strong>Tools</strong><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span></div></div></div>
+  </div>
+</div>
+</section>
+
+<section id="projects">
+<div class="container">
+  <div class="section-head"><div><h2>Projects</h2><p>Selected projects focused on useful real-world workflows, APIs and responsive web applications.</p></div></div>
+  <div class="grid">
+    <article class="card project"><h3>Railway Segment Vacancy Finder</h3><p>Built a Flask web application that finds seat availability for specific journey segments such as Delhi → Aligarh → Kanpur. Integrated railway APIs with train-number/name lookup and station search with name and station-code autosuggest.</p><div class="tech">Flask · JavaScript · HTML/CSS · Railway APIs</div></article>
+    <article class="card project"><h3>Virtual Campus Assistant</h3><p>Built a REST backend in Flask that answers common student queries on CGPA, library timings and placement information. Added multilingual support for Hindi and regional languages and connected the deployed backend to a web frontend.</p><div class="tech">Flask · Python · REST API · GoogleTranslator</div></article>
+    <article class="card project"><h3>Image Hunt</h3><p>Built a responsive image-search application with keyword search and dynamic rendering using the Unsplash API.</p><div class="tech">JavaScript · HTML/CSS · Unsplash API</div></article>
+  </div>
+</div>
+</section>
+
+<section id="achievements">
+<div class="container">
+  <div class="section-head"><div><h2>Achievements & Certifications</h2><p>Competitive programming progress and foundational cloud/software credentials.</p></div></div>
+  <div class="list">
+    <div class="list-item"><b>Smart India Hackathon (SIH)</b> — Participant</div>
+    <div class="list-item"><b>LeetCode</b> — 170+ problems solved: 128 Easy, 37 Medium, 7 Hard</div>
+    <div class="list-item"><b>AWS Academy Cloud Foundations</b> — AWS Academy (2025)</div>
+    <div class="list-item"><b>Data Structures & Algorithms</b> — Infosys Springboard: Java; Python Part 1 & Part 2 (2026)</div>
+  </div>
+</div>
+</section>
+
+<section id="resume">
+<div class="container">
+  <div class="resume">
+    <div><h2>Resume</h2><p style="color:var(--muted);margin-top:6px">Open or download my latest SDE fresher resume as a PDF.</p></div>
+    <div class="actions" style="margin-top:0"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Open Resume</a><a class="btn" href="resume.pdf" download>Download</a></div>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="section-head"><div><h2>Let's Connect</h2><p>Open to software engineering opportunities, projects and technical collaborations.</p></div></div>
+  <div class="contact-grid">
+    <div class="contact"><small>Email</small><a href="mailto:ayushkatiyar1508@gmail.com">ayushkatiyar1508@gmail.com</a></div>
+    <div class="contact"><small>GitHub</small><a href="https://github.com/ayushkatiyar1508" target="_blank" rel="noopener">github.com/ayushkatiyar1508</a></div>
+    <div class="contact"><small>LinkedIn</small><a href="https://www.linkedin.com/in/ayushkatiyar1508/" target="_blank" rel="noopener">linkedin.com/in/ayushkatiyar1508</a></div>
+    <div class="contact"><small>LeetCode</small><a href="https://leetcode.com/u/ayushkatiyar1508/" target="_blank" rel="noopener">leetcode.com/u/ayushkatiyar1508</a></div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer><div class="container">© 2026 Ayush Katiyar · B.Tech CSE · Greater Noida / Kanpur</div></footer>
+</body>
+</html>
